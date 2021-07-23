@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css"/>
+    <title>Moodbooks</title>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">contact</a></li>
+    </ul>
+    <div id="jumbotron-background">
+        <h1 id="moodbooksLogo">Moodbooks</h1>
+        <h2>Discover what to read next ...</h2>
+        <div class="search-container">
+            <input type="text" id ="query-area"
+            placeholder="type the author or the title of what you want to read"/>
+            <button id="submit">&#x27A1;</button>
+        </div>
+    </div>
+    <div id="tags-box">
+        <button class="tag" onclick="categorySearch(event)">Science</button>
+        <button class="tag" onclick="categorySearch(event)">Art</button>
+        <button class="tag" onclick="categorySearch(event)">Thrillers</button>
+        <button class="tag" onclick="categorySearch(event)">Plays</button>
+        <button class="tag" onclick="categorySearch(event)">Music</button>
+        <button class="tag" onclick="categorySearch(event)">Technology</button>
+        <button class="tag" onclick="categorySearch(event)">Medicine</button>
+        <button class="tag" onclick="categorySearch(event)">Mystery</button>
+        <button class="tag" onclick="categorySearch(event)">Detective stories</button>
+        <button class="tag" onclick="categorySearch(event)">History</button>
+        <button class="tag" onclick="categorySearch(event)">Children</button>
+        <button class="tag" onclick="categorySearch(event)">Textbooks</button>
+        <button class="tag" onclick="categorySearch(event)">Biographies</button>
+        <button class="tag" onclick="categorySearch(event)">Science Fiction</button>
+        <button class="tag" onclick="categorySearch(event)">Recipes</button>
+        <button class="tag" onclick="categorySearch(event)">Fantasy</button>
+        <button class="tag" onclick="categorySearch(event)">Romance</button>
+        <button class="tag" onclick="categorySearch(event)">Classic Books</button>
+    </div>   
+    <script defer src="./index.js"></script>
+</body>
+</html>

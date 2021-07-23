@@ -1,0 +1,127 @@
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    background-image: url(./res/cool-gradient-background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#moodbooksLogo{
+    font-family: 'SweetHipster', monospace;
+    font-weight: bolder;
+    font-size: 64px;
+    margin-top: 0em;
+    text-shadow: 5px 5px 1px #07bccc, 10px 10px 2px #f40468, 15px 15px 10px #482896;
+} 
+
+h2{
+    /*background: linear-gradient(180deg,  #046cf4,#07bccc,#482896);
+    -webkit-background-clip: text;*/
+    background-clip: text;
+    -webkit-text-fill-color: #284296;
+    -webkit-text-stroke: 0.05rem white;
+}
+
+#jumbotron-background{
+    /*background:linear-gradient(rgb(137, 222, 255),rgb(137, 238, 238));*/
+    height:auto;
+    text-align: center;
+    color: white;
+    font-family: monospace, "Lucida Console", Courier;
+    margin-bottom: 15px;
+
+}
+@keyframes animated-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 10px rgba(255,255,255,0);
+    }
+}
+
+#query-area{
+    animation: animated-border 1.5s infinite;
+    width: 50vw;
+    height: 2rem;
+    background-color: rgba(163, 217, 247, 0.5);
+    border: 1px solid rgb(95, 163, 202);
+    border-radius: 7px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin-left: 1.7rem;
+    font-size: large;
+    font-weight: bold;
+    font-family: monospace, "Lucida Console", Courier;
+}
+
+li, a{
+    text-decoration: none;
+    color: black;
+}
+#tags{
+    text-align: center;
+}
+
+#tags-box{
+    background: rgba(177, 225, 253, 0.45);
+    box-shadow: 5px 5px 1px #07bccc, 10px 10px 2px #f40468, 15px 15px 10px #482896;
+    width: 85%;
+    border-radius: 0.7rem;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.tag{
+    box-sizing: content-box;
+    padding: 7px 20px 7px 20px;
+    height: 1.7rem;
+    margin: 15px;
+    border: 0.15rem solid rgb(237, 251, 253) ;
+    border-radius: 5px;
+    background:rgba(207, 238, 255, 0.45);
+    cursor: pointer;
+    box-shadow: rgba(177, 225, 253, 0.45);
+}
+
+.tag:hover{
+    background:rgba(125, 206, 250, 0.45);
+    border: 0.15rem solid rgb(95, 163, 202) ;
+}
+.search-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#submit{
+    height: 2rem;
+    margin-left: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    /*this code to center the anchor tag while i styled it as a button*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: normal;
+    font-size: 1.2rem;
+    box-sizing: content-box;
+
+    background-color:rgba(61, 172, 231, 0.7);
+    color: aliceblue;   
+    border: 1px solid aliceblue;
+}
+#submit:hover{
+    background-color:rgba(61, 172, 231, 0.9);
+    transition: all 0.3s ease;
+    border: 1px dashed #07bccc;
+    font-weight: bold;
+}
