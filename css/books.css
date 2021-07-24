@@ -46,7 +46,7 @@ width: 100%;
 
 #readBtn:hover{
     padding: 7px;
-    
+    border-color: aliceblue;
 }
 
 .headerItems{

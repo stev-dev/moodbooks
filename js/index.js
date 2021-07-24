@@ -50,16 +50,15 @@ function categorySearch (event){
     .then(res => res.json())//parse the result as json
     .then(data => {
         //let randomKey = Math.floor(Math.random() * data.works.length) 
-        let categoryTitle= "categoryTitle",categoryAuthor="categoryAuthor"
-        ,categorysubject="categorysubject",coverImg = "coverImg"
-        ,dataLength=data.works.length
+        let dataLength = data.works.length
         
         localStorage.setItem("dataLength", data.works.length)
-        localStorage.setItem(categorysubject ,data.works[0].subject[0] )
+        localStorage.setItem("categorysubject" ,data.works[0].subject[0] )
         for(let i= 0; i < dataLength; i++){
-            localStorage.setItem(categoryTitle+i , data.works[i].title)
-            localStorage.setItem(categoryAuthor+i , data.works[i].authors[0].name)
-            localStorage.setItem(coverImg+i , data.works[i].cover_id)
+            localStorage.setItem("categoryTitle"+i , data.works[i].title)
+            localStorage.setItem("categoryAuthor"+i , data.works[i].authors[0].name)
+            localStorage.setItem("coverImg"+i , data.works[i].cover_id)
+            localStorage.setItem("bookCoverEditionKey"+i, data.works[i].cover_edition_key)
         }
 
         window.document.location = "./books.html"

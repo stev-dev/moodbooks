@@ -52,5 +52,16 @@ for(let i = 0; i<datalength ; i++){
     document.getElementById(author+i).innerHTML += localStorage.getItem(categoryAuthor+i)
 
     //let's add a button that leads to the open library link of that book
+    let bookKey = localStorage.getItem("bookCoverEditionKey"+i)
 
+    let buttonInsideLink = document.createElement("button")
+    buttonInsideLink.innerHTML = "read"
+    buttonInsideLink.id = "readBtn"
+
+    let linkBtn = document.createElement("a")
+    linkBtn.appendChild(buttonInsideLink);
+    linkBtn.setAttribute("target", "alt")
+    linkBtn.setAttribute("href", "https://openlibrary.org/books/"+ bookKey)
+
+    booksDiv.appendChild(linkBtn);
 }
