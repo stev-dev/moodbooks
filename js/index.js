@@ -17,6 +17,7 @@ function fetchFromSearchBar(){
     
     fetch(fetchUrl).then(resp=>{
         if(!resp.ok){
+            console.log("something went wrong")
             return "something went wrong"
         }else{
             return  resp.json()
@@ -30,8 +31,9 @@ function fetchFromSearchBar(){
         localStorage.setItem("firstPublishYear", data.docs[0].first_publish_year)
         localStorage.setItem("subject", data.docs[0].subject[0])
         localStorage.setItem("bookIsbn", data.docs[0].isbn[0])
-        //localStorage.setItem("firstSentence", data.docs[0].text[2])//may or may not exist
+        localStorage.setItem("bookeditionKey", data.docs[0].cover_edition_key)//OL26314691M is the cover_edition_key of the book
         window.document.location = "./singlebook.html"
+        //console.log(data.docs[0])
     })// !!! docs is an array 
     document.getElementById('query-area').value = ""
 }
@@ -51,6 +53,7 @@ function categorySearch (event){
         let categoryTitle= "categoryTitle",categoryAuthor="categoryAuthor"
         ,categorysubject="categorysubject",coverImg = "coverImg"
         ,dataLength=data.works.length
+        
         localStorage.setItem("dataLength", data.works.length)
         localStorage.setItem(categorysubject ,data.works[0].subject[0] )
         for(let i= 0; i < dataLength; i++){

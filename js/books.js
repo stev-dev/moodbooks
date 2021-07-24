@@ -24,10 +24,11 @@ const booksContainerHover =  {
 for(let i = 0; i<datalength ; i++){
     let boonOuterCtn = document.getElementById('bookOuterContainer')
     let booksDiv = document.createElement("div");
+    booksDiv.className = "bookCardHover";
     booksDiv.id = booksContainer+i;
     boonOuterCtn.appendChild(booksDiv);
 
-    Object.assign(booksDiv.style, BookContainerStyles)
+    Object.assign(booksDiv.style, BookContainerStyles)//assign the styles object to booksDiv
     // Object.assign(//how to hover dynamicaly, booksContainerHover)
     
     let covrImgtag = document.createElement("img");
@@ -49,4 +50,7 @@ for(let i = 0; i<datalength ; i++){
     document.getElementById(coverImg+i).setAttribute("src", "https://covers.openlibrary.org/b/id/"+imgCover+"-M.jpg")
     document.getElementById(title+i).innerHTML += localStorage.getItem(categoryTitle+i)
     document.getElementById(author+i).innerHTML += localStorage.getItem(categoryAuthor+i)
+
+    //let's add a button that leads to the open library link of that book
+
 }

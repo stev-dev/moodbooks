@@ -38,6 +38,17 @@ button:hover {
 width: 100%;
 }
 
+#readBtn{
+    color: aliceblue;
+    text-transform: capitalize;
+    padding: 5px;
+}
+
+#readBtn:hover{
+    padding: 7px;
+    
+}
+
 .headerItems{
     display: flex;
     align-items: center;
@@ -53,12 +64,13 @@ width: 100%;
     width: 30%;
     text-align: center;
 }
-#booksContainer:hover {
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-    transform: scale(1.01);
-}
 #bookOuterContainer{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+}
+
+.bookCardHover:hover{
+    box-Shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.03);
 }
