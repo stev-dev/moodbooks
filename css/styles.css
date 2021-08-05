@@ -23,6 +23,16 @@ h2{
     -webkit-text-stroke: 0.05rem white;
 }
 
+h3{
+    /*background: linear-gradient(180deg,  #046cf4,#07bccc,#482896);
+    -webkit-background-clip: text;*/
+    background-clip: text;
+    -webkit-text-fill-color: #5472d3;
+    -webkit-text-stroke: 0.05rem rgb(227, 233, 245);
+}
+
+
+
 #jumbotron-background{
     /*background:linear-gradient(rgb(137, 222, 255),rgb(137, 238, 238));*/
     height:auto;

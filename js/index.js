@@ -14,6 +14,13 @@ function fetchFromSearchBar(){
     let searchInputValue = document.getElementById('query-area').value
     let callablequery = makeQueryCallable(searchInputValue);
     let fetchUrl = "http://openlibrary.org/search.json?q="+callablequery
+
+    //add the loader element before calling the api
+    if(document.getElementById('query-area').value == ""){
+        document.getElementById("loader").innerHTML = "Please enter a valid book name"
+    }else{
+        document.getElementById("loader").innerHTML = "Please wait while we load your book"
+    }
     
     fetch(fetchUrl).then(resp=>{
         if(!resp.ok){
@@ -26,6 +33,7 @@ function fetchFromSearchBar(){
         //because of the nature of the promise the data manipulation and the work we want to do needs
         //to be inside the second promise 
         //we want to assing a bunch of variables to local storage
+
         localStorage.setItem("booktitle", data.docs[0].title)
         localStorage.setItem("bookAuthor", data.docs[0].author_name[0])
         localStorage.setItem("firstPublishYear", data.docs[0].first_publish_year)
@@ -35,6 +43,7 @@ function fetchFromSearchBar(){
         window.document.location = "./singlebook.html"
         //console.log(data.docs[0])
     })// !!! docs is an array 
+    document.getElementById("loader").innerHTML = ""
     document.getElementById('query-area').value = ""
 }
 
